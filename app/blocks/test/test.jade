@@ -1,0 +1,20 @@
+mixin test()
+    +b('section').test
+        +e.wrap
+            +e('p').title Давайте проверим
+            +e('p').text Выберите растение – основной аллерген и изучите список потенциально опасных продуктов
+            +e('p').info Важно: снизить вероятность возникновения перекрестных реакций помогает исключение из рациона перечисленных продуктов – желательно заблаговременно, за 2-3 недели до начала сезона активного пыления.
+            +e.answer
+                +e('button')(data-products="яблоки|/images/apple.png, слива|/images/слива.png, картофель|/images/картофель.png, груши|/images/груша.png, морковь|/images/морковь.png, помидоры|/images/помидор.png, орехи|/images/орех.png, сельдерей|/images/сельдерей.png, киви|/images/киви.png, вишня и черешня|/images/вишня.png, петрушка|/images/петрушка.png, маслины|/images/маслины.png, персики и абрикосы|/images/персик.png, мед|/images/мед.png, коньяк|/images/коньяк.png").answer-text береза, ольха, лещина
+                    +e.img-flower
+                        img(src='/images/1_hover.png')
+                +e('button')(data-products="пшеничный и ржаной хлеб|/images/хлеб.png, макароны|/images/макароны.png, булочные изделия|/images/булка.png, мюсли|/images/мюсли.png, овсяная и манная каша|/images/каша.png, пшеничная водка|/images/водка.png, орехи|/images/орех.png, рис|/images/рис.png, пиво|/images/пиво.png, пшено|/images/пшено.png, квас|/images/квас.png").answer-text злаковые травы
+                    +e.img-flower
+                        img(src='/images/3__hover.png')
+            +e.answer
+                +e('button')(data-products="семена подсолнечника|/images/семена.png, дыня|/images/дыня.png, огурцы|/images/огурцы.png, подсолнечное масло|/images/масло.png, арбуз|/images/арбуз.png, капуста|/images/капуста.png, халва|/images/халва.png, кабачки|/images/кабачок.png, вермуты|/images/вермут.png, майонез|/images/майонез.png, тыква|/images/тыква.png, манго|/images/манго.png, горчица|/images/горчица.png, баклажаны|/images/баклажан.png").answer-text подсолнечник, полынь,<br>амброзия
+                    +e.img-flower
+                        img(src='/images/2_hover.png')
+                +e('button')(data-products="свекла|/images/свекла.png, шпинат|/images/шпинат.png").answer-text лебеда
+                    +e.img-flower
+                        img(src='/images/4__hover.png')

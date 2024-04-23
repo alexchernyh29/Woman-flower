@@ -1,0 +1,123 @@
+.test
+    position relative
+    background-color $c-light-green
+    width 100%
+    height 100vh
+    overflow hidden
+    +below(768px)
+        overflow auto
+
+    &__wrap
+        padding-top 1%
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        +below(768px)
+            padding wm(30) wm(25)
+
+    &__title
+        font-family $ff-Bergamasco
+        font-weight 400
+        font-size w(120)
+        line-height w(124)
+        text-align center
+        color $c-white
+        +below(768px)
+            font-size wm(50)
+            line-height wm(54)
+
+    &__text
+        margin-top w(40)
+        font-family $ff-Robotomedium
+        font-weight 600
+        font-size w(26)
+        line-height w(32)
+        text-align center
+        color $c-white
+        +below(768px)
+            font-size wm(12)
+            line-height wm(16)
+            margin-top wm(25)
+
+    &__info
+        margin-top w(25)
+        font-family $ff-Roboto
+        font-weight 400
+        font-size w(24)
+        line-height w(28)
+        text-align center
+        color $c-white
+        max-width w(900)
+        +below(768px)
+            font-size wm(12)
+            line-height wm(16)
+            margin-top wm(25)
+            max-width wm(280)
+
+    &__answer
+        display flex
+        flex-direction row
+        justify-content center
+        align-items center
+        margin-top w(50)
+        &:last-child
+            margin-top w(25)
+
+        +below(768px)
+            flex-direction column
+            margin-top wm(25)
+
+    &__answer-text
+        position relative
+        width w(520)
+        height w(150)
+        font-family $ff-Robotomedium
+        font-weight 500
+        font-size w(20)
+        line-height w(24)
+        text-transform uppercase
+        text-align center
+        padding w(60)
+        background-color $c-white
+        color $c-green
+        transition 0.5s
+        border-radius w(32)
+        border none
+        &:hover
+            background-color $c-yellow
+            transition 0.5s
+            .test__img-flower
+                display block
+
+        &:last-child
+            margin-left w(110)
+
+        +below(768px)
+            font-size wm(14)
+            line-height wm(12)
+            border-radius wm(12)
+            padding wm(20)
+            width wm(230)
+            height wm(55)
+            margin-top wm(20)
+
+            &:last-child
+                margin-left wm(0)
+
+    &__img-flower
+        display none
+        position absolute
+        bottom w(-6)
+        right w(-60)
+        width w(230)
+        img
+            width 100%
+
+        +below(768px)
+            display block
+            bottom wm(-2)
+            right wm(-20)
+            width wm(70)
+
+    

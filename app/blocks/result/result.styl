@@ -1,0 +1,253 @@
+.result
+    position relative
+    width 100%
+    height 100vh
+    background-color $c-light-green
+    display none
+    overflow hidden
+    +below(768px)
+        overflow auto
+        height 100%
+
+    &__wrap
+        padding 2% 10%
+        display flex
+        flex-direction row
+        justify-content space-between
+        align-items center
+        +below(768px)
+            padding wm(30) wm(25)
+            flex-direction column
+
+    &__product
+        position relative
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        +below(768px)
+            align-items flex-start
+
+    &__answer-text
+        position relative
+        width w(520)
+        height w(150)
+        font-family $ff-Robotomedium
+        font-weight 500
+        font-size w(20)
+        line-height w(24)
+        text-transform uppercase
+        text-align center
+        padding w(60)
+        background-color $c-yellow
+        color $c-green
+        border-radius w(32)
+        border none
+
+        &:last-child
+            margin-left w(110)
+
+        +below(768px)
+            font-size wm(14)
+            line-height wm(14)
+            border-radius wm(12)
+            padding wm(15)
+            width wm(280)
+            height wm(50)
+            margin wm(20) auto
+
+            &:last-child
+                margin-left wm(0)
+
+    &__img-flower
+        position absolute
+        top w(-49)
+        right w(40)
+        width w(230)
+        img
+            width 100%
+
+        +below(768px)
+            display block
+            top wm(10)
+            right wm(0)
+            width wm(70)
+
+    &__info
+        margin-top w(25)
+        font-family $ff-Robotomedium
+        font-weight 500
+        font-size w(20)
+        line-height w(24)
+        letter-spacing 0.23em
+        text-transform uppercase
+        text-align center
+        color $c-white
+        +below(768px)
+            font-size wm(12)
+            line-height wm(16)
+            margin-top wm(15)
+
+    &__list
+        margin-top w(25)
+        max-width w(730)
+        display grid
+        grid-template-columns repeat(3, 1fr)
+        grid-gap w(20)
+        +below(768px)
+            grid-template-columns repeat(2, 1fr)
+            grid-gap wm(20)
+
+    &__items
+        display flex
+        flex-direction row
+        justify-content flex-start
+        align-items center
+
+    &__text-product
+        font-family $ff-Roboto
+        font-weight 400
+        font-size w(20)
+        line-height w(24)
+        color $c-white
+        margin-left w(10)
+        +below(768px)
+            font-size wm(12)
+            line-height wm(16)
+            margin-left wm(10)
+
+    &__link-product
+        margin-top w(50)
+        font-family $ff-Robotomedium
+        font-weight 400
+        font-size w(20)
+        line-height w(24)
+        text-transform uppercase
+        text-align center
+        color #fbff3f
+        background-color transparent
+        padding w(20) w(35)
+        border w(2) solid $c-white
+        border-radius w(32)
+        +below(768px)
+            font-size wm(12)
+            line-height wm(16)
+            margin wm(20) auto
+            padding wm(10) wm(15)
+            border wm(1.25) solid $c-white
+            border-radius wm(12)
+
+    &__recommendations
+        z-index 1
+        position relative
+        max-width w(500)
+        border-radius w(32)
+        padding w(45) w(30)
+        background-color $c-white
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        +below(768px)
+            max-width wm(280)
+            border-radius wm(12)
+            padding wm(20)
+            margin-top wm(30)
+
+    &__text
+        font-family $ff-Roboto
+        font-weight 400
+        font-size w(20)
+        line-height w(24)
+        text-align center
+        color $c-green
+        +below(768px)
+            font-size wm(12)
+            line-height wm(16)
+
+    &__wrap-pin
+        margin-top w(25)
+        display flex
+        flex-direction row
+        +below(768px)
+            margin-top wm(15)
+
+    &__pin
+        padding w(26) w(20)
+        border-radius w(32)
+        font-family $ff-Roboto
+        font-weight 400
+        font-size w(20)
+        line-height w(24)
+        text-align center
+        color $c-green
+        background-color $c-yellow
+        &.main
+            margin-left w(10)
+            width w(215)
+
+        &.small
+            margin-bottom w(10)
+
+        +below(768px)
+            border-radius wm(12)
+            font-size wm(12)
+            line-height wm(16)
+            padding wm(10) wm(15)
+            &.main
+                margin-left wm(10)
+                width wm(130)
+
+            &.small
+                margin-bottom wm(10)
+
+    &__link
+        margin-top w(40)
+        padding w(30) w(50)
+        font-family $ff-Robotomedium
+        font-weight 600
+        font-size w(20)
+        line-height w(24)
+        letter-spacing 0.23em
+        text-transform uppercase
+        text-align center
+        color $c-white
+        border-radius w(32)
+        background linear-gradient(30deg, #378255 0%, #b5d177 100%)
+        text-decoration none
+        +below(768px)
+            font-size wm(12)
+            line-height wm(16)
+            border-radius wm(12)
+            margin-top wm(20)
+            padding wm(15) wm(20)
+
+    &__img-1
+        z-index 1
+        position absolute
+        top w(20)
+        left 100%
+        width w(200)
+        img
+            width 100%
+
+        +below(768px)
+            top wm(-40)
+            width wm(100)
+
+    &__img-2
+        z-index 1
+        position absolute
+        top w(120)
+        right 100%
+        width w(200)
+        img
+            width 100%
+        +below(768px)
+            top wm(20)
+            width wm(100)
+
+    &__images
+        width w(58)
+        +below(768px)
+            width wm(34)

@@ -1,0 +1,21 @@
+mixin result()
+    +b('section')(id="result-section").result
+        +e.wrap
+            +e.product
+                +e('button')(id="selected-answer").answer-text
+                +e.img-flower(id="selected-img")
+                +e('p').info список потенциально опасных продуктов:
+                +e('ul')(id="product-list").list
+                +e('a').link-product выбрать другой аллерген
+            +e.recommendations
+                +e.img-1
+                    img(src='/images/pin-img-1.png')
+                +e.img-2
+                    img(src='/images/pin-img-2.png')
+                +e('p').text Снижать выраженность аллергического ринита и конъюнктивита, вызванного пылением растений, либо перекрестной реакцией на продукты питания, помогают современные антигистаминные средства      последнего поколения с действующим веществом цетиризин.
+                +e.wrap-pin
+                    +e.wrap-pins
+                        +e.pin.small 1 таблетка в сутки
+                        +e.pin практически не вызывает сонливости
+                    +e.pin.main облегчает симптомы аллергического ринита, конъюнктивита и крапивницы
+                +e('a')(href="#").link узнать больше
