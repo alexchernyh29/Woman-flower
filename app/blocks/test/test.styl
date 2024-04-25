@@ -1,6 +1,6 @@
 .test
     position relative
-    background-color $c-light-green
+    background-color transparent
     width 100%
     height 100vh
     overflow hidden
@@ -33,6 +33,7 @@
         font-weight 600
         font-size w(26)
         line-height w(32)
+        text-transform uppercase
         text-align center
         color $c-white
         +below(768px)
@@ -84,6 +85,7 @@
         transition 0.5s
         border-radius w(32)
         border none
+        letter-spacing w(3.68)
         &:hover
             background-color $c-yellow
             transition 0.5s
@@ -101,6 +103,7 @@
             width wm(230)
             height wm(55)
             margin-top wm(20)
+            letter-spacing wm(3.68)
 
             &:last-child
                 margin-left wm(0)

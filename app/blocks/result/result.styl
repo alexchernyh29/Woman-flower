@@ -2,7 +2,7 @@
     position relative
     width 100%
     height 100vh
-    background-color $c-light-green
+    background-color transparent
     display none
     overflow hidden
     +below(768px)
@@ -43,6 +43,7 @@
         color $c-green
         border-radius w(32)
         border none
+        letter-spacing w(3.68)
 
         &:last-child
             margin-left w(110)
@@ -55,6 +56,7 @@
             width wm(280)
             height wm(50)
             margin wm(20) auto
+            letter-spacing wm(3.68)
 
             &:last-child
                 margin-left wm(0)
@@ -79,14 +81,16 @@
         font-weight 500
         font-size w(20)
         line-height w(24)
-        letter-spacing 0.23em
+        letter-spacing 23%
         text-transform uppercase
         text-align center
         color $c-white
+        letter-spacing w(3.68)
         +below(768px)
             font-size wm(12)
             line-height wm(16)
             margin-top wm(15)
+            letter-spacing wm(3.68)
 
     &__list
         margin-top w(25)
@@ -96,7 +100,9 @@
         grid-gap w(20)
         +below(768px)
             grid-template-columns repeat(2, 1fr)
-            grid-gap wm(20)
+            grid-gap wm(10)
+            max-width wm(280)
+            margin-left 9%
 
     &__items
         display flex
@@ -129,6 +135,12 @@
         padding w(20) w(35)
         border w(2) solid $c-white
         border-radius w(32)
+        transition 0.5s
+        letter-spacing w(3.68)
+        &:hover
+            color $c-green
+            background-color $c-white
+            transition 0.5s
         +below(768px)
             font-size wm(12)
             line-height wm(16)
@@ -136,6 +148,7 @@
             padding wm(10) wm(15)
             border wm(1.25) solid $c-white
             border-radius wm(12)
+            letter-spacing wm(3.68)
 
     &__recommendations
         z-index 1
@@ -181,7 +194,7 @@
         line-height w(24)
         text-align center
         color $c-green
-        background-color $c-yellow
+        background-color #F8E645
         &.main
             margin-left w(10)
             width w(215)
@@ -208,19 +221,21 @@
         font-weight 600
         font-size w(20)
         line-height w(24)
-        letter-spacing 0.23em
+        letter-spacing 23%
         text-transform uppercase
         text-align center
         color $c-white
         border-radius w(32)
         background linear-gradient(30deg, #378255 0%, #b5d177 100%)
         text-decoration none
+        letter-spacing w(3.68)
         +below(768px)
             font-size wm(12)
             line-height wm(16)
             border-radius wm(12)
             margin-top wm(20)
             padding wm(15) wm(20)
+            letter-spacing wm(3.68)
 
     &__img-1
         z-index 1
