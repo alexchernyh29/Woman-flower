@@ -7,11 +7,15 @@ $(() => {
         var productsArray = productsData.split(', ');
 
 		var imageUrl = $(this).find('img').attr('src');
-    	console.log(imageUrl);
         $('#selected-answer').text($(this).text());
 		$('#selected-img').append($('<img>').attr('src', imageUrl));
         $('#product-list').empty();
-
+        $(".result__answer-text").each(function() {
+            if ($(this).text().trim().toLowerCase() === "лебеда") {
+                $('.result__list').css("grid-template-columns", "repeat(2, 1fr)")
+                console.log(1);
+            }
+        });
         $.each(productsArray, function(index, productData) {
             var productInfo = productData.split('|');
             var productName = productInfo[0];
@@ -26,6 +30,12 @@ $(() => {
 			$('.result').hide();
         	$('.test').show();
 			$('#selected-img').find('img').remove();
+            var screenWidth = $(window).innerWidth();
+            if(screenWidth < 768) {
+                $('.result__list').css("grid-template-columns", "repeat(2, 1fr)")
+            } else {
+                $('.result__list').css("grid-template-columns", "repeat(3, 1fr)")
+            }
 		});
     });
 });
