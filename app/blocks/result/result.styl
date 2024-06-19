@@ -163,6 +163,9 @@
         flex-direction column
         justify-content center
         align-items center
+
+        &.pink
+            background linear-gradient(90deg, #8b2b86 0%, #c12686 100%)
         +below(768px)
             max-width wm(280)
             border-radius wm(12)
@@ -181,11 +184,34 @@
             line-height wm(12)
 
     &__wrap-pin
+        display none
         margin-top w(25)
-        display flex
-        flex-direction row
+        // display flex
+        flex-direction column
+        align-items center
         +below(768px)
             margin-top wm(15)
+
+    &__pin-img
+        width w(455)
+        img
+            width 100%
+        +below(768px)
+            width wm(275)
+
+    &__pin-text
+        margin-top w(30)
+        font-family $ff-Roboto
+        font-weight 400
+        font-size w(18)
+        line-height w(18)
+        text-align center
+        color #fff
+        opacity 0.3
+        +below(768px)
+            margin-top wm(10)
+            font-size wm(12)
+            line-height wm(12)
 
     &__pin
         padding w(26) w(20)
@@ -196,7 +222,7 @@
         line-height w(24)
         text-align center
         color $c-green
-        background-color #F8E645
+        background-color $c-white
         &.main
             margin-left w(10)
             width w(215)
@@ -216,7 +242,16 @@
             &.small
                 margin-bottom wm(10)
 
+    &__wrap-pins
+        display flex
+        flex-direction row
+
+    &__wrap-link
+        display flex
+        flex-direction column
+
     &__link
+        max-width w(370)
         margin-top w(40)
         padding w(30) w(50)
         font-family $ff-Robotomedium
@@ -230,7 +265,10 @@
         border-radius w(32)
         background linear-gradient(30deg, #378255 0%, #b5d177 100%)
         text-decoration none
-        height w(80)
+
+        &.blue
+            background linear-gradient(90deg, #007cc4 0%, #03aae2 100%)
+
         +below(768px)
             font-size wm(10)
             line-height wm(12)
@@ -238,7 +276,7 @@
             margin-top wm(20)
             padding wm(17) wm(20)
             letter-spacing wm(2.3)
-            height wm(45)
+            max-width wm(185)
 
     &__img-1
         z-index 1

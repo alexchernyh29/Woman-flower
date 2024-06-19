@@ -37,5 +37,12 @@ $(() => {
                 $('.result__list').css("grid-template-columns", "repeat(3, 1fr)")
             }
 		});
+        $('.result__link').click(function() {
+            $('.result__wrap-pin').show();
+            $('.result__wrap-pin').css("display", "flex");
+            $('.result__text').hide();
+            $('.result__recommendations').toggleClass("pink")
+            $('.result__wrap-link').hide();
+        });
     });
 });
