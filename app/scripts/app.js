@@ -36,12 +36,18 @@ $(() => {
             } else {
                 $('.result__list').css("grid-template-columns", "repeat(3, 1fr)")
             }
+            $('.result__wrap-pin').show();
+            $('.result__wrap-pin').hide();
+            $('.result__text').show();
+            $('.result__recommendations').removeClass("pink");
+            $('.result__wrap-link').show();
 		});
+
         $('.result__link.main').click(function() {
             $('.result__wrap-pin').show();
             $('.result__wrap-pin').css("display", "flex");
             $('.result__text').hide();
-            $('.result__recommendations').toggleClass("pink")
+            $('.result__recommendations').addClass("pink");
             $('.result__wrap-link').hide();
         });
     });
